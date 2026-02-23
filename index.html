@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Git Streak - Track your GitHub contributions and build a streak.">
+    <title>Git Streak: iashyam</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <header class="header" style="justify-content: center;">
+            <h1 class="logo" style="font-size: 2.25rem;">Git <span>Streak</span></h1>
+        </header>
+
+        <main class="main-content" id="main-content">
+            <!-- Profile Section -->
+            <section class="profile-section fade-in">
+                <img id="avatar" src="https://github.com/iashyam.png" alt="User Avatar" class="avatar" loading="lazy">
+                <div class="user-info">
+                    <h2>iashyam</h2>
+                    <a href="https://github.com/iashyam" target="_blank" class="login">@iashyam</a>
+                </div>
+            </section>
+
+            <!-- Stats Grid -->
+            <section class="stats-grid fade-in delay-1">
+                <div class="stat-card highlight">
+                    <div class="stat-icon streak-icon">🔥</div>
+                    <div class="stat-content">
+                        <h3>Current Streak</h3>
+                        <p id="current-streak" class="stat-value"><!--TEMPLATE:CURRENT_STREAK-->5 days<!--ENDTEMPLATE-->
+                        </p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon longest-icon">🏆</div>
+                    <div class="stat-content">
+                        <h3>Longest Streak</h3>
+                        <p id="longest-streak" class="stat-value"><!--TEMPLATE:LONGEST_STREAK-->8 days<!--ENDTEMPLATE-->
+                        </p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon total-icon">📊</div>
+                    <div class="stat-content">
+                        <h3>Total Contributions</h3>
+                        <p id="total-contributions" class="stat-value"><!--TEMPLATE:TOTAL-->279<!--ENDTEMPLATE--></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Heatmap Section -->
+            <section class="heatmap-section fade-in delay-2">
+                <div class="heatmap-header">
+                    <h3>Contribution Heatmap</h3>
+                    <div class="year-selector" id="year-selector">
+                        <span id="current-year" style="font-size: 0.85rem; color: var(--text-muted);">Last 365
+                            Days</span>
+                    </div>
+                </div>
+
+                <div class="heatmap-scroll-container">
+                    <div class="heatmap-container" id="heatmap-container">
+                        <!--TEMPLATE:HEATMAP-->
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-02-23"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-02-24"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-02-25"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-02-26"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-02-27"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-02-28"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-03-01"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-03-02"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-03-03"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-03-04"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-03-05"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-03-06"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-03-07"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-03-08"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-03-09"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-03-10"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-03-11"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-03-12"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-03-13"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-03-14"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-03-15"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-03-16"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-03-17"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-03-18"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-03-19"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-03-20"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-03-21"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-03-22"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-03-23"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-03-24"></div>
+                        <div class="heatmap-day" data-level="2" data-tooltip="Level 2 on 2025-03-25"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-03-26"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-03-27"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-03-28"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-03-29"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-03-30"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-03-31"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-04-01"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-04-02"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-04-03"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-04-04"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-04-05"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-04-06"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-04-07"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-04-08"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-04-09"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-04-10"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-04-11"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-04-12"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-04-13"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-04-14"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-04-15"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-04-16"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-04-17"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-04-18"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-04-19"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-04-20"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-04-21"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-04-22"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-04-23"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-04-24"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-04-25"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-04-26"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-04-27"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-04-28"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-04-29"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-04-30"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-05-01"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-05-02"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-05-03"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-05-04"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-05-05"></div>
+                        <div class="heatmap-day" data-level="4" data-tooltip="Level 4 on 2025-05-06"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-05-07"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-05-08"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-05-09"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-05-10"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-05-11"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-05-12"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-05-13"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-05-14"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-05-15"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-05-16"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-05-17"></div>
+                        <div class="heatmap-day" data-level="3" data-tooltip="Level 3 on 2025-05-18"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-05-19"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-05-20"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-05-21"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-05-22"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-05-23"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-05-24"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-05-25"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-05-26"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-05-27"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-05-28"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-05-29"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-05-30"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-05-31"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-06-01"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-06-02"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-06-03"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-06-04"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-06-05"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-06-06"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-06-07"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-06-08"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-06-09"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-06-10"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-06-11"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-06-12"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-06-13"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-06-14"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-06-15"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-06-16"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-06-17"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-06-18"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-06-19"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-06-20"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-06-21"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-06-22"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-06-23"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-06-24"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-06-25"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-06-26"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-06-27"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-06-28"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-06-29"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-06-30"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-07-01"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-07-02"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-07-03"></div>
+                        <div class="heatmap-day" data-level="2" data-tooltip="Level 2 on 2025-07-04"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-07-05"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-07-06"></div>
+                        <div class="heatmap-day" data-level="2" data-tooltip="Level 2 on 2025-07-07"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-07-08"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-07-09"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-07-10"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-07-11"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-07-12"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-07-13"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-07-14"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-07-15"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-07-16"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-07-17"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-07-18"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-07-19"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-07-20"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-07-21"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-07-22"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-07-23"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-07-24"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-07-25"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-07-26"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-07-27"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-07-28"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-07-29"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-07-30"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-07-31"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-08-01"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-08-02"></div>
+                        <div class="heatmap-day" data-level="2" data-tooltip="Level 2 on 2025-08-03"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-08-04"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-08-05"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-08-06"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-08-07"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-08-08"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-08-09"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-08-10"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-08-11"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-08-12"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-08-13"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-08-14"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-08-15"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-08-16"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-08-17"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-08-18"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-08-19"></div>
+                        <div class="heatmap-day" data-level="3" data-tooltip="Level 3 on 2025-08-20"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-08-21"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-08-22"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-08-23"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-08-24"></div>
+                        <div class="heatmap-day" data-level="2" data-tooltip="Level 2 on 2025-08-25"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-08-26"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-08-27"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-08-28"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-08-29"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-08-30"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-08-31"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-09-01"></div>
+                        <div class="heatmap-day" data-level="2" data-tooltip="Level 2 on 2025-09-02"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-09-03"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-09-04"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-09-05"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-09-06"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-09-07"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-09-08"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-09-09"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-09-10"></div>
+                        <div class="heatmap-day" data-level="2" data-tooltip="Level 2 on 2025-09-11"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-09-12"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-09-13"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-09-14"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-09-15"></div>
+                        <div class="heatmap-day" data-level="3" data-tooltip="Level 3 on 2025-09-16"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-09-17"></div>
+                        <div class="heatmap-day" data-level="4" data-tooltip="Level 4 on 2025-09-18"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-09-19"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-09-20"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-09-21"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-09-22"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-09-23"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-09-24"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-09-25"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-09-26"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-09-27"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-09-28"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-09-29"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-09-30"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-10-01"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-10-02"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-10-03"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-10-04"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-10-05"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-10-06"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-10-07"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-10-08"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-10-09"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-10-10"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-10-11"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-10-12"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-10-13"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-10-14"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-10-15"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-10-16"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-10-17"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-10-18"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-10-19"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-10-20"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-10-21"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-10-22"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-10-23"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-10-24"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-10-25"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-10-26"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-10-27"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-10-28"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-10-29"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-10-30"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-10-31"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-11-01"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-11-02"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-11-03"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-11-04"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-11-05"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-11-06"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-11-07"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-11-08"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-11-09"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-11-10"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-11-11"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-11-12"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-11-13"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-11-14"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-11-15"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-11-16"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-11-17"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-11-18"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-11-19"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-11-20"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-11-21"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-11-22"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-11-23"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-11-24"></div>
+                        <div class="heatmap-day" data-level="2" data-tooltip="Level 2 on 2025-11-25"></div>
+                        <div class="heatmap-day" data-level="2" data-tooltip="Level 2 on 2025-11-26"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-11-27"></div>
+                        <div class="heatmap-day" data-level="3" data-tooltip="Level 3 on 2025-11-28"></div>
+                        <div class="heatmap-day" data-level="4" data-tooltip="Level 4 on 2025-11-29"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-11-30"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-12-01"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-12-02"></div>
+                        <div class="heatmap-day" data-level="4" data-tooltip="Level 4 on 2025-12-03"></div>
+                        <div class="heatmap-day" data-level="2" data-tooltip="Level 2 on 2025-12-04"></div>
+                        <div class="heatmap-day" data-level="4" data-tooltip="Level 4 on 2025-12-05"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-12-06"></div>
+                        <div class="heatmap-day" data-level="2" data-tooltip="Level 2 on 2025-12-07"></div>
+                        <div class="heatmap-day" data-level="3" data-tooltip="Level 3 on 2025-12-08"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-12-09"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-12-10"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-12-11"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-12-12"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-12-13"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-12-14"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-12-15"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-12-16"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-12-17"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-12-18"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-12-19"></div>
+                        <div class="heatmap-day" data-level="2" data-tooltip="Level 2 on 2025-12-20"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-12-21"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-12-22"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-12-23"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2025-12-24"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-12-25"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-12-26"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-12-27"></div>
+                        <div class="heatmap-day" data-level="3" data-tooltip="Level 3 on 2025-12-28"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-12-29"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-12-30"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2025-12-31"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2026-01-01"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2026-01-02"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2026-01-03"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2026-01-04"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2026-01-05"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2026-01-06"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2026-01-07"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2026-01-08"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2026-01-09"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2026-01-10"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2026-01-11"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2026-01-12"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2026-01-13"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2026-01-14"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2026-01-15"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2026-01-16"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2026-01-17"></div>
+                        <div class="heatmap-day" data-level="3" data-tooltip="Level 3 on 2026-01-18"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2026-01-19"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2026-01-20"></div>
+                        <div class="heatmap-day" data-level="2" data-tooltip="Level 2 on 2026-01-21"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2026-01-22"></div>
+                        <div class="heatmap-day" data-level="2" data-tooltip="Level 2 on 2026-01-23"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2026-01-24"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2026-01-25"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2026-01-26"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2026-01-27"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2026-01-28"></div>
+                        <div class="heatmap-day" data-level="2" data-tooltip="Level 2 on 2026-01-29"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2026-01-30"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2026-01-31"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2026-02-01"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2026-02-02"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2026-02-03"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2026-02-04"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2026-02-05"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2026-02-06"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2026-02-07"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2026-02-08"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2026-02-09"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2026-02-10"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2026-02-11"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2026-02-12"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2026-02-13"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2026-02-14"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2026-02-15"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2026-02-16"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2026-02-17"></div>
+                        <div class="heatmap-day" data-level="0" data-tooltip="No contributions on 2026-02-18"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2026-02-19"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2026-02-20"></div>
+                        <div class="heatmap-day" data-level="3" data-tooltip="Level 3 on 2026-02-21"></div>
+                        <div class="heatmap-day" data-level="4" data-tooltip="Level 4 on 2026-02-22"></div>
+                        <div class="heatmap-day" data-level="1" data-tooltip="Level 1 on 2026-02-23"></div>
+                        <!--ENDTEMPLATE-->
+                    </div>
+                </div>
+
+                <div class="heatmap-legend">
+                    <span class="legend-text"
+                        style="margin-right: auto; padding-left: 5px; color: var(--text-muted); font-size: 0.75rem;"
+                        id="last-updated"><!--TEMPLATE:UPDATED-->Last updated: Feb 23, 2026, 15:51 UTC<!--ENDTEMPLATE--></span>
+                    <span class="legend-text">Less</span>
+                    <span class="legend-box level-0" title="0 contributions"></span>
+                    <span class="legend-box level-1" title="Level 1"></span>
+                    <span class="legend-box level-2" title="Level 2"></span>
+                    <span class="legend-box level-3" title="Level 3"></span>
+                    <span class="legend-box level-4" title="Level 4+"></span>
+                    <span class="legend-text">More</span>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Ensure container scrolls to the right (most recent) automatically on load
+        window.addEventListener('load', () => {
+            const scrollContainer = document.querySelector('.heatmap-scroll-container');
+            if (scrollContainer) {
+                scrollContainer.scrollLeft = scrollContainer.scrollWidth;
+            }
+        });
+    </script>
+</body>
+
+</html>
